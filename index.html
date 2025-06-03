@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMODITIES SIM v0.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-container">
+        <header class="terminal-header">
+            <div class="header-left">
+                <h1>COMMODITIES SIM v0.3</h1>
+                <div id="game-time-display" class="game-time">Game Time: --:--:--</div>
+            </div>
+            <div class="balance-info">
+                <span>CURRENT BALANCE:</span>
+                <span id="player-balance" class="balance-value">0 ESI</span>
+            </div>
+            <button class="close-terminal-button" aria-label="Close terminal">X</button>
+        </header>
+
+        <div id="event-banner" class="event-banner-bar"></div>
+        <div id="transaction-status" class="transaction-status-bar"></div>
+
+        <main class="terminal-main-content">
+            <aside class="left-panel">
+                <div class="player-info-header">
+                    <div class="location-selector-container">
+                        <label for="location-select">Current Location:</label>
+                        <select id="location-select"></select>
+                    </div>
+                    <div id="current-ship-info" class="ship-info">
+                        Ship: <span id="current-ship-name">N/A</span> | Cargo: <span id="current-cargo-display">0/0 SCU</span>
+                    </div>
+                </div>
+                
+                <h2>YOUR INVENTORIES</h2>
+                <div class="sub-category-selector">
+                    <span>SELECT SUB-CATEGORY</span> <button class="arrow-button">►</button>
+                </div>
+                <div class="demand-filters">
+                    <div class="filter-option"><span>IN DEMAND</span><button class="filter-action-button">+</button></div>
+                    <div class="filter-option"><span>NO DEMAND</span><button class="filter-action-button">+</button></div>
+                    <div class="filter-option"><span>CANNOT SELL</span><button class="filter-action-button">x</button></div>
+                </div>
+                <div id="player-inventory-list" class="inventory-list">
+                    <p class="placeholder-text">Player inventory is empty or loading...</p>
+                </div>
+                <div class="game-actions">
+                    <button id="save-game-button">Save Progression</button>
+                    <button id="load-game-button">Load Progression</button>
+                </div>
+            </aside>
+
+            <section class="right-panel">
+                <h2>SHOP INVENTORY (<span id="shop-location-name">N/A</span>)</h2>
+                <nav class="shop-navigation-tabs">
+                    <button class="tab-button active" data-tab="buy">BUY / SELL TO SHOP</button>
+                    <button class="tab-button" data-tab="market-value">LOCAL MARKET OVERVIEW</button>
+                </nav>
+                <div class="shop-content">
+                    <div id="buy-content" class="tab-content active">
+                        <section class="stock-section in-stock">
+                            <h3>ITEMS AVAILABLE FOR PURCHASE</h3>
+                            <div id="shop-instock-list" class="shop-items-container">
+                                <p class="placeholder-text">Shop stock is empty or loading...</p>
+                            </div>
+                        </section>
+                        <section class="stock-section out-of-stock">
+                            <h3>ITEMS TEMPORARILY OUT OF STOCK (OR NOT SOLD HERE)</h3>
+                            <div id="shop-outofstock-list" class="shop-items-container">
+                                <p class="placeholder-text">No items currently out of stock.</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="market-value-content" class="tab-content">
+                        <h3>COMMODITY MARKET VALUES AT <span id="market-overview-location-name">N/A</span></h3>
+                        <div id="market-overview-list" class="market-overview-container">
+                             <!-- Market overview will be populated here -->
+                             <p class="placeholder-text">Loading market overview...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="hud-indicators">
+            <div class="hud-item"><span class="hud-icon">[💧]</span><span class="hud-value">57%</span></div>
+            <div class="hud-item"><span class="hud-icon">[Fe]</span><span class="hud-value">97%</span></div>
+            <div class="hud-item"><span class="hud-icon">[⚡]</span><span class="hud-value">96%</span></div>
+        </footer>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
