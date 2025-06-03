@@ -6,7 +6,8 @@
 
 **Un simulateur de terminal de commerce inspiré de Star Citizen, développé en HTML, CSS et JavaScript pur. Ce projet vise à explorer et tester des concepts d'économie de jeu, de logistique de cargo, d'événements de marché dynamiques et d'interactions utilisateur.**
 
-![image](https://i.imgur.com/RNndHdv.png) <!-- Remplacez par une capture d'écran à jour de votre v0.3 si disponible -->
+![image](https://github.com/user-attachments/assets/5f888b29-4d20-4075-a2bc-f41e3097dc01)
+ <!-- Remplacez par une capture d'écran à jour de votre v0.3 si disponible -->
 
 ## Fonctionnalités Actuelles (v0.3)
 
